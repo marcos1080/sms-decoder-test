@@ -4,7 +4,7 @@
     {
         public static  bool IsSpace(this char key)
         {
-            return ValidKeys.IsSpace(key);
+            return Keys.IsSpace(key);
         }
 
         public static bool IsEqualTo(this char key, LetterKey comparer)
@@ -14,7 +14,7 @@
 
         public static bool IsValidLetterKey(this char key)
         {
-            return ValidKeys.IsValidKey(key);
+            return Keys.IsValid(key);
         }
     }
 }

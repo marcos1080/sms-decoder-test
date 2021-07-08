@@ -4,24 +4,24 @@
     {
         private int _index;
 
-        public LetterKey(char number)
+        public LetterKey(char key)
         {
-            Number = number;
+            Number = key;
             _index = 0;
         }
 
         public char Number { get; }
-        public char Letter => ValidKeys.KeyValues[Number][_index];
+        public char Letter => Keys.GetLetter(Number, _index);
 
         public bool IsSpace()
         {
-            return ValidKeys.IsSpace(Number);
+            return Keys.IsSpace(Number);
         }
 
         public void Press()
         {
             _index++;
-            if (_index == ValidKeys.KeyValues[Number].Length)
+            if (_index == Keys.LetterCount(Number))
             {
                 _index = 0;
             }

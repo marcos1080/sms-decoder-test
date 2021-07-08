@@ -14,7 +14,7 @@ namespace SmsKeyPressDecoder
         public void Add(LetterKey keyState) {
             _keys.AddLast(keyState);
 
-            if (!ValidKeys.IsSpace(keyState.Number))
+            if (!Keys.IsSpace(keyState.Number))
             {
                 LastLetterKeyPressed = keyState;
             }
